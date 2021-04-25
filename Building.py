@@ -8,5 +8,4 @@ class Building(object):
         self.type = type.value
         self.is_complete = False
         self.building_dict = {"1" :[[[1], 1]], "2" : [[[1], 1], [[2, 3],1]], "3" : [[[1], 2], [[2], 2], [[1,2,3],4]]}
-        {1:[[1],1]}
         self.emp_list = copy.deepcopy(self.building_dict[str(self.type)])
