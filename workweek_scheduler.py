@@ -40,11 +40,11 @@ class WorkweekScheduler(object):
                             if workweek[k][i] != 0 or workweek[k][i] == -1:
                                 continue
                             else:
-                                if self.needEmployee(buildings[j],employees[k]):
+                                if self.need_employee(buildings[j],employees[k]):
                                     employee_ids.append(k)
                         self.update_building(buildings[j],employee_ids)
                         if buildings[j].is_complete == True:
-                            workweek = self.updateWorkWeek(employee_ids,buildings[j].id,i,workweek)
+                            workweek = self.update_workweek(employee_ids,buildings[j].id,i,workweek)
                         else:
                             self.revert(buildings[j])
                             
@@ -52,7 +52,7 @@ class WorkweekScheduler(object):
                     
                                     
                                 
-    def updateWorkWeek(self, emp_ids, building_id, day,workweek):
+    def update_workweek(self, emp_ids, building_id, day,workweek):
         """
         Method to update the workweek grid
         
@@ -89,7 +89,7 @@ class WorkweekScheduler(object):
                 building.is_complete = True
                         
                         
-    def needEmployee(self, building, employee):
+    def need_employee(self, building, employee):
         """
         Method to determine whether there is a need for the employee on a specific building.
 
