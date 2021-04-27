@@ -1,4 +1,7 @@
 class Availability(object):
+    """
+    To define availability string for employee working from Monday through Friday.
+    """
     
     def __init__(self,availability_string):
         
